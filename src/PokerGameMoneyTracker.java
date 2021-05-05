@@ -55,13 +55,13 @@ public class PokerGameMoneyTracker {
 
         for(int i = 0; i < 5; i++) {
             if(player1Money == 0) {
-                System.out.println(playerName1 + ": All in");
+                System.out.println("\t" + playerName1 + ": All in");
             }
             if(player2Money == 0) {
-                System.out.println(playerName2 + ": All in");
+                System.out.println("\t" + playerName2 + ": All in");
             }
             if(player3Money == 0) {
-                System.out.println(playerName3 + ": All in");
+                System.out.println("\t" + playerName3 + ": All in");
             }
 
             System.out.print("What is the highest bet? ");
@@ -93,15 +93,15 @@ public class PokerGameMoneyTracker {
         System.out.println("> " + playerName3 + ": " + player3Money);
 
         if(player1Money <= 0) {
-            System.out.println(playerName1 + " has lost.");
+            System.out.println("\t" + playerName1 + " has lost.");
             again = false;
         }
         if(player2Money <= 0) {
-            System.out.println(playerName2 + " has lost.");
+            System.out.println("\t" + playerName2 + " has lost.");
             again = false;
         }
         if(player3Money <= 0) {
-            System.out.println(playerName3 + " has lost.");
+            System.out.println("\t" + playerName3 + " has lost.");
             again = false;
         }
     }
