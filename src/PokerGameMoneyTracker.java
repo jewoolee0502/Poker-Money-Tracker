@@ -12,6 +12,7 @@ public class PokerGameMoneyTracker {
     private static int highestBet;
     private static int tempBet = 0;
     private static int roundMoney;
+    private static boolean again = true;
 
 
     public static void main(String[] args) {
@@ -44,9 +45,10 @@ public class PokerGameMoneyTracker {
     }
 
     public static void pokerGame(Scanner input) {
-        for(int i = 0; i < 50; i++) {
+        while(again) {
             rounds(input);
         }
+        System.exit(0);
     }
 
     public static void rounds(Scanner input) {
@@ -90,17 +92,17 @@ public class PokerGameMoneyTracker {
         System.out.println("> " + playerName2 + ": " + player2Money);
         System.out.println("> " + playerName3 + ": " + player3Money);
 
-        if(player1Money == 0) {
+        if(player1Money <= 0) {
             System.out.println(playerName1 + " has lost.");
-            System.exit(0);
+            again = false;
         }
-        if(player2Money == 0) {
+        if(player2Money <= 0) {
             System.out.println(playerName2 + " has lost.");
-            System.exit(0);
+            again = false;
         }
-        if(player3Money == 0) {
+        if(player3Money <= 0) {
             System.out.println(playerName3 + " has lost.");
-            System.exit(0);
+            again = false;
         }
     }
 
